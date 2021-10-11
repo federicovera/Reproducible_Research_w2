@@ -51,4 +51,18 @@ steps_x_day <- aggregate(clear_Data$steps, by= list(Steps.Date= clear_Data$date)
 
 ```
 
+## 2_2 Histogram of the total number os steps taken each day
+
+plot the number of steps  in the x axis, divided in 20 breaks, and the y shows
+the frecuency of how many days that quantity appear.
+
+```{r  echo="FALSE" }
+hist(steps_x_day$x,
+     breaks=20,
+     main="Histogram total number steps x day",
+     xlab= "Steps x day",
+     ylab= "n° of days with this steps"
+     )
+```
+
 
