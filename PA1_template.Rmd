@@ -174,5 +174,20 @@ median(full_steps_x_day$x, na.rm=TRUE)
 
 ```
 The mean was reduced a litle bit, but the median keep the same value.
+## Are there differences in activity patterns between weekdays and weekends?
+
+## 5_1 Create a new factor variable in the dataset with two levels- "weekday" "weekend" indicating whether a given date is a weekday pr weekend day
+
+```{r }
+
+full_data$newDate <- as.Date(full_data$date, format = "%Y-%m-%d")
+
+full_data$weekday <- weekdays(full_data$newDate)
+
+full_data$day_type <- ifelse(full_data$weekday=='Saturday' | 
+full_data$weekday=='Sunday', 'weekend','weekday')
+
+head(full_data, n=12)
+```
 
 
