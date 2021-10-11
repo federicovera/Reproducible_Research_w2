@@ -64,5 +64,21 @@ hist(steps_x_day$x,
      ylab= "n° of days with this steps"
      )
 ```
+## Calculating and reporting the mean and median of the total number of 
+##steps taken per day
+
+```{R mean and median}
+
+#Mean
+mean(steps_x_day$x, na.rm=TRUE)
+
+```
+
+
+```{R mean and median}
+#Median
+median(steps_x_day$x, na.rm=TRUE)
+
+```
 
 
