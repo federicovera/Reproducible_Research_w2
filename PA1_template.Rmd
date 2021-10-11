@@ -125,5 +125,13 @@ data$full_steps <- ifelse(is.na(data$steps), round(avg_steps_x_interval$steps[ma
 head(data)
 
 ```
- 
+ ## 4_3 Create a new dataset with the NA values filled
+```{R}
+# new dataframe
+
+full_data <- data.frame(steps=data$full_steps, interval= data$interval, date= data$date)
+
+head(full_data)
+```
+
 
