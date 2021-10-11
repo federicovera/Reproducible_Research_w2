@@ -17,7 +17,7 @@ We take the URL of the data and put it on a local directory with  a copy on Gith
 
 
 
-```{r data}
+```{r url}
 # URL address of the data
 URL <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 
@@ -67,7 +67,7 @@ hist(steps_x_day$x,
 ## Calculating and reporting the mean and median of the total number of 
 ##steps taken per day
 
-```{R mean and median}
+```{R mean1}
 
 #Mean
 mean(steps_x_day$x, na.rm=TRUE)
@@ -75,7 +75,7 @@ mean(steps_x_day$x, na.rm=TRUE)
 ```
 
 
-```{R mean and median}
+```{R median1}
 #Median
 median(steps_x_day$x, na.rm=TRUE)
 
@@ -160,7 +160,7 @@ hist(full_steps_x_day$x,
 Calculating the mean and median
 
 
-```{R mean and median}
+```{R mean2}
 
 #Mean
 mean(full_steps_x_day$x, na.rm=TRUE)
@@ -168,7 +168,7 @@ mean(full_steps_x_day$x, na.rm=TRUE)
 ```
 
 
-```{R mean and median}
+```{R median2}
 #Median
 median(full_steps_x_day$x, na.rm=TRUE)
 
