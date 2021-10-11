@@ -105,5 +105,13 @@ max_interval <- which.max(avg_steps_x_interval$steps)
 print (paste("The interval with the highest avg step is",avg_steps_x_interval[max_interval,]$interval," and the interval's step number is",round(avg_steps_x_interval[max_interval,]$steps, digits=1)))
 
 ```
+## 4) Imputing missing values
+
+## 4_1 Calculate and report the total number os missing values
+
+```{R missing_values}
+missing_value_act <- data[!complete.cases(data),]
+nrow(missing_value_act)
+```
 
 
