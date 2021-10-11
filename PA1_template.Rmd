@@ -29,3 +29,14 @@ download.file(URL,destfile="./datastore/repdata_2Fdata_2Factivity.zip",method="a
 unzip(zipfile="./datastore/repdata_2Fdata_2Factivity.zip",exdir="data")
  
 ```
+## 1_2 Process/Transform the data into a format suitable for analysis
+
+Cleaning the NA data
+
+```{r data}
+
+data <- read.csv("data/activity.csv", header=TRUE)
+clear_Data <- na.omit(data)
+
+```
+
