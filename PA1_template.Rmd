@@ -40,3 +40,15 @@ clear_Data <- na.omit(data)
 
 ```
 
+
+## 2) What is mean total number os steps taken per day?
+
+## 2_1 Calculating Total number of steps per day
+
+```{r steps}
+
+steps_x_day <- aggregate(clear_Data$steps, by= list(Steps.Date= clear_Data$date), FUN = "sum")
+
+```
+
+
