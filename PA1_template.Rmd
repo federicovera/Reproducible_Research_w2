@@ -133,5 +133,46 @@ full_data <- data.frame(steps=data$full_steps, interval= data$interval, date= da
 
 head(full_data)
 ```
+## 4_4 Make a Histogram of the total number of steps taken each day
+
+
+```{r full steps}
+
+full_steps_x_day <- aggregate(full_data$steps, by= list(Steps.Date= full_data$date), FUN = "sum")
+
+```
+
+
+
+
+plot the number of steps  in the x axis, divided in 20 breaks, and the y shows
+the frecuency of how many days that quantity appear.
+
+```{r  }
+hist(full_steps_x_day$x,
+     breaks=20,
+     main="Histogram total number steps x day",
+     xlab= "Steps x day",
+     ylab= "n° of days with this steps"
+     )
+```
+
+Calculating the mean and median
+
+
+```{R mean and median}
+
+#Mean
+mean(full_steps_x_day$x, na.rm=TRUE)
+
+```
+
+
+```{R mean and median}
+#Median
+median(full_steps_x_day$x, na.rm=TRUE)
+
+```
+The mean was reduced a litle bit, but the median keep the same value.
 
 
