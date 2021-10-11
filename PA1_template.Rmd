@@ -114,4 +114,16 @@ missing_value_act <- data[!complete.cases(data),]
 nrow(missing_value_act)
 ```
 
+## 4_2 Devise a strategy for filling missing values in the dataset
+
+# Im' going to replace the missing values (NA) with the average 5 minute interval
+
+```{R }
+data$full_steps <- ifelse(is.na(data$steps), round(avg_steps_x_interval$steps[match(data$interval,avg_steps_x_interval$interval)
+],0),data$steps)
+
+head(data)
+
+```
+ 
 
